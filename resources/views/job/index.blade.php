@@ -23,7 +23,7 @@
                     <x-radio-group name="category" :options="\App\Models\Job::$category" />
                 </div>
             </div>
-            <button class="w-full">Filters</button>
+            <x-button class="w-full">Filters</x-button>
         </form>
     </x-card>
     @foreach ($jobs as $job)
