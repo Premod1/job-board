@@ -11,7 +11,31 @@
 </head>
 
 <body class="mx-auto mt-10 max-w-2xl bg-slate-200 text-slate-700">
-    {{ auth()->user()->name ?? 'Guest' }}
+    <nav class="mb-8 flex justify-between text-lg font-medium">
+        <ul class="flex space-x-2">
+            <li>
+                <a href="{{route('jobs.index')}}">Home</a>
+            </li>
+        </ul>
+        <ul class="flex space-x-2">
+            @auth
+                <li>
+                    {{ auth()->user()->name ?? 'Annoymous' }}
+                </li>
+                <li>
+                    <form action="{{ route('auth.destroy') }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            @else
+               <li>
+                     <a href="{{route('auth.create')}}">Sign In</a>
+               </li>
+            @endauth
+        </ul>
+    </nav>
    {{ $slot }}
 </body>
 
