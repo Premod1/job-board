@@ -2,6 +2,11 @@
 
 A job board platform built with Laravel where users can search for jobs and post job opportunities. This application provides a robust backend and a user-friendly interface to manage job listings efficiently.
 
+## Screenshots
+
+![Job Board Screenshot](public/Screenshot%20from%202024-12-17%2014-19-06.png)
+
+
 ## Features
 
 - **Job Search**: Search for jobs using filters like keywords, job type, and location.
